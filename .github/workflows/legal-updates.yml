@@ -6,8 +6,8 @@ on:
       - main
     paths:
       # Change these paths to match exactly where the markdown files live in your repo
-      - 'docs/privacy.md'
-      - 'docs/terms.md'
+      - 'privacypolicy.md'
+      - 'terms.md'
 
 jobs:
   notify-users:
