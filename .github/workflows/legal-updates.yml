@@ -1,0 +1,24 @@
+name: Legal Docs Notification Workflow
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      # Change these paths to match exactly where the markdown files live in your repo
+      - 'docs/privacy.md'
+      - 'docs/terms.md'
+
+jobs:
+  notify-users:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v3
+
+      - name: Trigger Cloudflare Worker
+        run: |
+          # Replace the URL below with your actual deployed Cloudflare Worker URL
+          curl -X POST " https://notify-legal-updates.screendemons.workers.dev" \
+          -H "Content-Type: application/json" \
+          -d '{"secret": "${{ secrets.LEGAL_WEBHOOK_SECRET }}"}'
