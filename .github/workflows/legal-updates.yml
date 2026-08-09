@@ -19,6 +19,6 @@ jobs:
       - name: Trigger Cloudflare Worker
         run: |
           # Replace the URL below with your actual deployed Cloudflare Worker URL
-          curl -X POST " https://notify-legal-updates.screendemons.workers.dev" \
+          curl -X POST "https://notify-legal-updates.screendemons.workers.dev" \
           -H "Content-Type: application/json" \
           -d '{"secret": "${{ secrets.LEGAL_WEBHOOK_SECRET }}"}'
