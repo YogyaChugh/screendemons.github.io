@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>You're invited to Screen Demons!</title>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #E2F0EF;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #111827;
+        }
+        .container {
+            background-color: #FFFFFF;
+            padding: 40px 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+            max-width: 400px;
+            width: 90%;
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 10px;
+            color: #111827;
+        }
+        p {
+            color: #4B5563;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+        .btn {
+            display: block;
+            background-color: #4A7C73;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            margin-bottom: 15px;
+            transition: opacity 0.2s;
+        }
+        .btn:hover {
+            opacity: 0.9;
+        }
+        .username-highlight {
+            color: #4A7C73;
+            font-weight: 800;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Add me on Screen Demons!</h1>
+        <p><span class="username-highlight" id="inviter">Someone</span> has challenged you to reduce your screen time.</p>
+        
+        <div id="action-buttons">
+            <a href="#" id="store-btn" class="btn">Download the App</a>
+        </div>
+    </div>
+
+    <script>
+        // Extract username from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const username = urlParams.get('u');
+        if (username) {
+            document.getElementById('inviter').innerText = "@" + username;
+        }
+
+        // Device detection
+        const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+        const storeBtn = document.getElementById('store-btn');
+        
+        // App Links (Fallback URLs)
+        const iOSAppStore = "https://apps.apple.com/app/id6796334366";
+        const androidPlayStore = "https://play.google.com/store/apps/details?id=com.screendemons.app"; // Update when published
+
+        if (/android/i.test(userAgent)) {
+            storeBtn.innerText = "Download on Google Play";
+            storeBtn.href = androidPlayStore;
+        } else if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+            storeBtn.innerText = "Download on the App Store";
+            storeBtn.href = iOSAppStore;
+        } else {
+            // Desktop
+            storeBtn.innerText = "Download the App";
+            storeBtn.href = iOSAppStore; // Default to iOS or show landing page
+            
+            // Optionally, you can try to trigger the custom protocol if they have it installed on a Mac (M1/M2 apps)
+            const appDeepLink = "screendemons://invite.html?u=" + (username || '');
+            window.location.href = appDeepLink;
+        }
+
+        // Attempt to launch the app natively first (for iOS Safari/Android Chrome fallback)
+        // Note: Universal Links should handle this automatically if configured properly,
+        // but this script acts as a safety net if they clicked a raw link that didn't trigger the OS intercept.
+        window.onload = function() {
+            if (/android|iPad|iPhone|iPod/i.test(userAgent)) {
+                // We set a small timeout. If the app opens via the custom scheme, the page will freeze.
+                // If the app doesn't open, the timeout fires and we do nothing (they stay on page to click 'Download').
+                const appScheme = "screendemons://invite.html?u=" + (username || '');
+                setTimeout(function() {
+                    // Do nothing, let them click the button
+                }, 2000);
+                window.location.href = appScheme;
+            }
+        };
+    </script>
+</body>
+</html>
