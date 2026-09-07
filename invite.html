@@ -95,7 +95,7 @@
             storeBtn.href = iOSAppStore; // Default to iOS or show landing page
             
             // Optionally, you can try to trigger the custom protocol if they have it installed on a Mac (M1/M2 apps)
-            const appDeepLink = "screendemons://invite.html?u=" + (username || '');
+            const appDeepLink = "screendemons://invite?u=" + (username || '');
             window.location.href = appDeepLink;
         }
 
@@ -106,7 +106,7 @@
             if (/android|iPad|iPhone|iPod/i.test(userAgent)) {
                 // We set a small timeout. If the app opens via the custom scheme, the page will freeze.
                 // If the app doesn't open, the timeout fires and we do nothing (they stay on page to click 'Download').
-                const appScheme = "screendemons://invite.html?u=" + (username || '');
+                const appScheme = "screendemons://invite?u=" + (username || '');
                 setTimeout(function() {
                     // Do nothing, let them click the button
                 }, 2000);
