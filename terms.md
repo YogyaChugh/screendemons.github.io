@@ -3,8 +3,7 @@
 **Last Updated:** [Date]
 
 Welcome to Screen Demon. These Terms and Conditions outline the rules and regulations for the use of Screen Demon's Website and Mobile Application.
-
-By accessing this app, we assume you accept these terms and conditions. Do not continue to use Screen Demon if you do not agree to take all of the terms and conditions stated on this page.
+By accessing this app, we assume you accept these terms and conditions.
 
 ## 1. User Accounts
 When you create an account with us, you must provide us information that is accurate, complete, and current at all times. Failure to do so constitutes a breach of the Terms, which may result in immediate termination of your account on our Service.
