@@ -1,11 +1,1 @@
-{
-  "applinks": {
-    "apps": [],
-    "details": [
-      {
-        "appID": "RWBH9J96W3.com.screendemons.app",
-        "paths": ["/invite/*"]
-      }
-    ]
-  }
-}
+﻿{ "applinks": { "apps": [], "details": [ { "appID": "RWBH9J96W3.com.screendemons.app", "paths": ["*", "/invite", "/invite/*"] } ] } }
