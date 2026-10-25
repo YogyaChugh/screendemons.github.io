@@ -19,7 +19,7 @@ document.querySelectorAll('[data-store="android"]').forEach((a) => {
   }
 });
 
-// Fade things in as they scroll into view.
+// Fade things in once as they scroll into view.
 const items = document.querySelectorAll('.reveal');
 if ('IntersectionObserver' in window) {
   const io = new IntersectionObserver(
@@ -38,7 +38,7 @@ if ('IntersectionObserver' in window) {
   items.forEach((el) => el.classList.add('in'));
 }
 
-// "What does scrolling cost you?" Same sums as the app's onboarding.
+// "How hungry is your demon?" The slider drives the numbers and the demon's mood.
 const age = document.getElementById('age');
 const hours = document.getElementById('hours');
 if (age && hours) {
@@ -51,7 +51,17 @@ if (age && hours) {
     if (days >= 1) return `${trim(days)} days`;
     return `${Math.round(days * 24)} h`;
   };
+  const MOODS = {
+    starving: { label: 'Starving', line: 'Under 2 hours? I’m starving. Please don’t stop.' },
+    peckish: { label: 'Peckish', line: 'Hmm. A snack. I’m still hungry.' },
+    fed: { label: 'Well fed', line: 'Now we’re talking. Keep scrolling, I’m full of you.' },
+    feasting: { label: 'Feasting', line: 'FEAST! Is there any of you left to eat?' },
+  };
+  const moodFor = (h) => (h <= 2 ? 'starving' : h <= 4 ? 'peckish' : h <= 6 ? 'fed' : 'feasting');
   const $ = (id) => document.getElementById(id);
+  const faces = document.querySelectorAll('.demon-stage img');
+  let current = '';
+
   const update = () => {
     const a = Number(age.value);
     const h = Number(hours.value);
@@ -71,13 +81,29 @@ if (age && hours) {
         : `You’re already <strong>under ${GREEN} h</strong>. Keep your demon green.`;
     age.setAttribute('aria-valuetext', `${a} years old`);
     hours.setAttribute('aria-valuetext', `${trim(h)} hours a day`);
+
+    const mood = moodFor(h);
+    if (mood !== current) {
+      current = mood;
+      faces.forEach((img) => img.classList.toggle('on', img.dataset.m === mood));
+      $('moodChip').textContent = MOODS[mood].label;
+      $('moodChip').dataset.m = mood;
+      $('bubble').textContent = MOODS[mood].line;
+    }
   };
   age.addEventListener('input', update);
   hours.addEventListener('input', update);
   update();
 }
 
-// Waitlist (Android launch). Posts to the same form service as before.
+// A download bar on phones once the hero has scrolled away.
+const sticky = document.getElementById('stickyCta');
+const hero = document.getElementById('top');
+if (sticky && hero && 'IntersectionObserver' in window) {
+  new IntersectionObserver(([entry]) => sticky.classList.toggle('show', !entry.isIntersecting), { threshold: 0 }).observe(hero);
+}
+
+// Waitlist (Android launch).
 const form = document.getElementById('waitlistForm');
 if (form) {
   form.addEventListener('submit', async (e) => {

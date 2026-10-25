@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Screen Demons: reduce your screen time with friends</title>
-  <meta name="description" content="Screen Demons turns cutting screen time into a game with friends. Challenge people you know, build streaks, pause before distracting apps, and keep your demon calm. Free on iPhone, Android coming soon.">
+  <title>Screen Demons: your phone is feeding a demon. Starve it.</title>
+  <meta name="description" content="Screen Demons turns cutting screen time into a game with friends. Put a coffee on it, build streaks, take a breath before the apps that pull you in, and keep your demon calm. Free on iPhone, Android coming soon.">
   <link rel="canonical" href="https://screendemons.app/">
   <meta name="theme-color" content="#0C2A32">
   <meta name="apple-itunes-app" content="app-id=6796334366">
 
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Screen Demons">
-  <meta property="og:title" content="Screen Demons: reduce the scroll, reclaim your time">
+  <meta property="og:title" content="Screen Demons: your phone is feeding a demon. Starve it.">
   <meta property="og:description" content="Challenge friends, build streaks and starve your screen demon. A calmer way to use your phone.">
   <meta property="og:url" content="https://screendemons.app/">
   <meta property="og:image" content="https://screendemons.app/og-image-v3.png">
@@ -20,7 +20,7 @@
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="Screen Demons: Reduce the scroll. Reclaim your time. With the Screen Demon mascot.">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Screen Demons: reduce the scroll, reclaim your time">
+  <meta name="twitter:title" content="Screen Demons: your phone is feeding a demon. Starve it.">
   <meta name="twitter:description" content="Challenge friends, build streaks and starve your screen demon.">
   <meta name="twitter:image" content="https://screendemons.app/og-image-v3.png">
 
@@ -32,7 +32,6 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/assets/site.css">
-  <link rel="preload" as="image" href="/assets/screens/home.webp" type="image/webp">
 
   <script type="application/ld+json">
   {
@@ -55,14 +54,11 @@
   </script>
 </head>
 <body>
-  <!-- Icons (Feather, MIT). Used with <svg class="i"><use href="#i-name"/></svg> -->
   <svg width="0" height="0" style="position:absolute" aria-hidden="true">
     <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
     <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
     <symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
-    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
     <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
-    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
     <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
     <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
     <symbol id="i-bar" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></symbol>
@@ -71,20 +67,19 @@
     <symbol id="i-trash" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m5 0V4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v2"/></symbol>
     <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></symbol>
     <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></symbol>
+    <symbol id="i-flag" viewBox="0 0 24 24"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></symbol>
   </svg>
 
   <a class="skip" href="#main">Skip to content</a>
 
   <header class="nav">
     <div class="wrap">
-      <a class="brand" href="/" aria-label="Screen Demons home">
-        <img src="/assets/icons/icon-192.png" alt="" width="38" height="38">
-        Screen Demons
-      </a>
+      <a class="brand" href="/" aria-label="Screen Demons home"><img src="/assets/icons/icon-192.png" alt="" width="38" height="38">Screen Demons</a>
       <nav class="nav-links" aria-label="Main">
-        <a href="#cost">What it costs you</a>
         <a href="#how">How it works</a>
-        <a href="#features">Features</a>
+        <a href="#bet">Challenges</a>
+        <a href="#pause">Pauses</a>
         <a href="#privacy">Privacy</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -93,22 +88,16 @@
   </header>
 
   <main id="main">
-    <!-- Hero -->
-    <section class="hero" style="padding:0">
+    <!-- Hero: the demon sits on the card, and reacts to the slider -->
+    <section class="hero" id="top">
       <div class="wrap">
         <div>
           <span class="tag"><span class="dot"></span>Screen time, but social</span>
-          <h1>Reduce the scroll. <span class="hl">Reclaim your time.</span></h1>
-          <p class="lede">Screen Demons turns cutting back into a game you play with friends. Challenge them, build streaks, take a breath before the apps that pull you in, and keep your demon calm.</p>
+          <h1>Your phone is <span class="scribble">feeding</span> a demon.</h1>
+          <p class="lede">Screen Demons helps you starve it. Put a coffee on it with friends, build streaks, and take a breath before the apps that pull you in.</p>
           <div class="cta-row">
-            <a class="btn btn-lime" data-store="ios" href="https://apps.apple.com/app/id6796334366">
-              <svg class="i"><use href="#i-smartphone"/></svg>
-              <span class="two"><small>Download on the</small>App Store</span>
-            </a>
-            <a class="btn btn-ghost" data-store="android" href="#waitlist" aria-disabled="true">
-              <svg class="i"><use href="#i-play"/></svg>
-              <span class="two"><small>Android</small>Coming soon</span>
-            </a>
+            <a class="btn btn-lime" data-store="ios" href="https://apps.apple.com/app/id6796334366"><svg class="i"><use href="#i-smartphone"/></svg><span class="two"><small>Download on the</small>App Store</span></a>
+            <a class="btn btn-ghost" data-store="android" href="#waitlist" aria-disabled="true"><svg class="i"><use href="#i-play"/></svg><span class="two"><small>Android</small>Coming soon</span></a>
           </div>
           <div class="trust">
             <span><svg class="i"><use href="#i-check"/></svg>Free to download</span>
@@ -117,55 +106,35 @@
           </div>
         </div>
 
-        <div class="hero-art">
-          <img class="demon" src="/assets/mascot/happy.webp" alt="The Screen Demons mascot peeking over the phone" width="330" height="195">
-          <div class="phone"><img src="/assets/screens/home.webp" alt="The Screen Demons home screen with streak, savings and leaderboard" width="402" height="874" fetchpriority="high"></div>
-          <div class="float one"><span class="ring"></span><span><small>You saved</small><span class="big-n">45m today</span></span></div>
-          <div class="float two"><small>Coffee at stake</small><span style="color:#1F6B45">You’re 1h 21m ahead</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Ticker -->
-    <div class="ticker" aria-hidden="true">
-      <div class="track">
-        <span>Loser buys the coffee</span><span>Winner picks dinner</span><span>Double or nothing</span><span>Pizza on the line</span><span>One more day, one more streak</span><span>Starve the demon</span>
-        <span>Loser buys the coffee</span><span>Winner picks dinner</span><span>Double or nothing</span><span>Pizza on the line</span><span>One more day, one more streak</span><span>Starve the demon</span>
-      </div>
-    </div>
-
-    <!-- Cost -->
-    <section id="cost" class="cost">
-      <div class="wrap">
-        <div class="reveal">
-          <span class="eyebrow">Be honest, nobody’s watching</span>
-          <h2 class="title">What does scrolling cost you?</h2>
-          <p class="sub">Slide your age and daily screen time. It’s the same moment that opens the app, and it’s a little shocking in a useful way.</p>
-          <div class="cta-row">
-            <a class="btn btn-lime" data-store="ios" href="https://apps.apple.com/app/id6796334366">Let’s win it back</a>
+        <div class="stage">
+          <p class="bubble" id="bubble" aria-live="polite">Hmm. A snack. I’m still hungry.</p>
+          <div class="demon-stage" aria-hidden="true">
+            <img data-m="starving" src="/assets/mascot/sleepy.webp" alt="" width="826" height="487">
+            <img data-m="peckish" src="/assets/mascot/calm.webp" alt="" width="826" height="487">
+            <img data-m="fed" src="/assets/mascot/happy.webp" alt="" width="826" height="487">
+            <img data-m="feasting" src="/assets/mascot/red.webp" alt="" width="826" height="487">
           </div>
-        </div>
-        <div class="calc reveal" style="--d:.1s">
-          <img class="peek" src="/assets/mascot/happy.webp" alt="" width="140" height="83">
-          <div class="readout">
-            <div class="num"><span id="years" style="font-size:1em;margin:0">9.2</span><span>years</span></div>
-            <p>of your life on your phone, from age <b id="ageText">25</b> to 80</p>
-            <span class="pill">That’s <span id="share">25%</span> of your waking hours</span>
+          <div class="calc">
+            <div class="calc-head"><b>How hungry is your demon?</b><span class="mood-chip" id="moodChip" data-m="peckish">Peckish</span></div>
+            <div class="readout">
+              <div class="num"><span id="years">9.2</span><small>years</small></div>
+              <p>of your life on your phone, from age <b id="ageText">25</b> to 80. That’s <b id="share">25%</b> of your waking hours.</p>
+            </div>
+            <div class="slider">
+              <div class="row"><label for="hours">Screen time a day</label><b id="hoursOut">4 h</b></div>
+              <input id="hours" type="range" min="0.5" max="12" step="0.5" value="4" aria-valuetext="4 hours a day">
+            </div>
+            <div class="slider">
+              <div class="row"><label for="age">Your age</label><b id="ageOut">25</b></div>
+              <input id="age" type="range" min="10" max="79" step="1" value="25" aria-valuetext="25 years old">
+            </div>
+            <div class="spans">
+              <div><b id="week">1.2 days</b><span>a week</span></div>
+              <div><b id="month">5 days</b><span>a month</span></div>
+              <div><b id="year">2 months</b><span>a year</span></div>
+            </div>
+            <div class="win"><span class="tick"><svg class="i"><use href="#i-check"/></svg></span><span id="win">Keep your demon <strong>green (under 2 h)</strong> and you <strong>win back 4.6 years</strong>.</span></div>
           </div>
-          <div class="slider">
-            <div class="row"><label for="age">Your age</label><b id="ageOut">25</b></div>
-            <input id="age" type="range" min="10" max="79" step="1" value="25" aria-valuetext="25 years old">
-          </div>
-          <div class="slider">
-            <div class="row"><label for="hours">Screen time a day</label><b id="hoursOut">4 h</b></div>
-            <input id="hours" type="range" min="0.5" max="12" step="0.5" value="4" aria-valuetext="4 hours a day">
-          </div>
-          <div class="spans">
-            <div><b id="week">1.2 days</b><span>a week</span></div>
-            <div><b id="month">5 days</b><span>a month</span></div>
-            <div><b id="year">2 months</b><span>a year</span></div>
-          </div>
-          <div class="win"><span class="tick"><svg class="i"><use href="#i-check"/></svg></span><span id="win">Keep your demon <strong>green (under 2 h)</strong> and you <strong>win back 4.6 years</strong>.</span></div>
         </div>
       </div>
     </section>
@@ -185,124 +154,127 @@
       </div>
     </section>
 
-    <!-- Features -->
-    <section id="features" style="padding-top:0">
+    <!-- Challenges -->
+    <section class="feat sun" id="bet" style="--bw: var(--amber)">
+      <img class="peeker r" src="/assets/mascot/happy.webp" alt="" width="230" height="136">
+      <div class="bgword" aria-hidden="true"><span>BET</span></div>
       <div class="wrap">
-        <div class="center reveal">
-          <span class="eyebrow">Everything in the app</span>
-          <h2 class="title">Built to make cutting back<br>actually fun</h2>
+        <div class="copy reveal">
+          <span class="eyebrow">Challenges</span>
+          <h2>Put a coffee on it.</h2>
+          <p>Challenge anyone on your friends list or in your circles. Whoever uses their phone least wins, and the loser pays the stake.</p>
+          <ul class="ticks">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>No Phone, Reduce Screen Time or No Social Media</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>From 1 to 30 days, starting when you choose</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Rematch, or go double or nothing</li>
+          </ul>
+          <div class="stakes" aria-label="Example stakes"><span>Coffee</span><span>Pizza</span><span>Ice cream</span><span>Ramen</span><span>Your own dare</span></div>
         </div>
-
-        <div class="bento">
-          <!-- Challenges -->
-          <article class="tile s4 reveal">
-            <div class="split">
-              <div>
-                <span class="chipicon"><svg class="i"><use href="#i-zap"/></svg></span>
-                <h3>Bet your friends on who scrolls less</h3>
-                <p>Challenge anyone on your friends list or in your circles. Whoever uses their phone least wins, and the loser pays the stake.</p>
-                <ul class="ticks">
-                  <li><svg class="i"><use href="#i-check"/></svg>No Phone, Reduce Screen Time or No Social Media</li>
-                  <li><svg class="i"><use href="#i-check"/></svg>From 1 to 30 days, starting when you choose</li>
-                  <li><svg class="i"><use href="#i-check"/></svg>Rematch, or go double or nothing</li>
-                </ul>
-              </div>
-              <div class="duel" role="img" aria-label="Example challenge: you are 1 hour 21 minutes ahead of Alex">
-                <div class="top">
-                  <span class="who"><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>You</span>
-                  <span class="vs">VS</span>
-                  <span class="who">Alex<span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span></span>
-                </div>
-                <div><div class="meta-row"><span>You</span><b>2h 10m</b></div><div class="bar"><i style="width:62%"></i></div></div>
-                <div><div class="meta-row"><span>Alex</span><b>3h 31m</b></div><div class="bar warn"><i style="width:100%"></i></div></div>
-                <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge"><svg class="i"><use href="#i-check"/></svg>1h 21m ahead</span><span class="stake"><svg class="i"><use href="#i-coffee"/></svg>Coffee · day 3 of 7</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Mindful pauses -->
-          <article class="tile s2 r2 dark reveal" style="--d:.08s">
-            <span class="chipicon"><svg class="i"><use href="#i-wind"/></svg></span>
-            <h3>A breath before the apps that pull you in</h3>
-            <p>Choose the apps you open without thinking. When you reach for one, a short guided reset appears. Then you decide.</p>
-            <div class="modchips" aria-label="Guided resets"><span class="on"><svg class="i"><use href="#i-wind"/></svg>Breathing</span><span>Eye reset</span><span>Water</span><span>Posture</span></div>
-            <div class="mock" style="width:100%">
-              <div class="pause" role="img" aria-label="A paused app with a breathing exercise">
-                <small>Opening an app you chose</small>
-                <h4>Breathe with me.</h4>
-                <p>The urge passes faster than you think.</p>
-                <img class="dm" src="/assets/mascot/calm.webp" alt="" width="190" height="115">
-                <div class="sheet"><b>Breathe in…</b><div class="bar"><i></i></div><span>6s before opening</span></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- Streaks and moods -->
-          <article class="tile s2 mint reveal" style="--d:.1s">
-            <span class="chipicon"><svg class="i"><use href="#i-award"/></svg></span>
-            <h3>A demon that reacts to your day</h3>
-            <div class="streakn"><b>7</b><span style="font-weight:700">day streak</span></div>
-            <div class="week" aria-hidden="true">
-              <div>M<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>W<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>F<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="today"></i></div>
-            </div>
-            <div class="moods">
-              <figure class="c1"><div class="face"><img src="/assets/mascot/sleepy.webp" alt="A calm demon"></div><figcaption>Calm</figcaption></figure>
-              <figure class="c2"><div class="face"><img src="/assets/mascot/calm.webp" alt="An active demon"></div><figcaption>Active</figcaption></figure>
-              <figure class="c3"><div class="face"><img src="/assets/mascot/red.webp" alt="An overstimulated demon"></div><figcaption>Overstimulated</figcaption></figure>
-            </div>
-          </article>
-
-          <!-- Circles -->
-          <article class="tile s2 reveal" style="--d:.15s">
-            <span class="chipicon"><svg class="i"><use href="#i-users"/></svg></span>
-            <h3>Your crew, ranked every week</h3>
-            <p>Start a circle with friends or your class. Share a code and anyone can join.</p>
-            <div class="mock board" style="margin-top:20px" role="img" aria-label="Example circle leaderboard">
-              <div class="row"><span class="rk">1</span><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>Alex<span class="t">2h 04m</span></div>
-              <div class="row"><span class="rk">2</span><span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span>You<span class="t">2h 31m</span></div>
-              <div class="row"><span class="rk">3</span><span class="av c"><img src="/assets/mascot/happy.webp" alt=""></span>Jo<span class="t">3h 12m</span></div>
-              <div class="code"><svg class="i"><use href="#i-key"/></svg>ABCDE-FGHJK</div>
-            </div>
-          </article>
-
-          <!-- Goals -->
-          <article class="tile s3 reveal">
-            <span class="chipicon"><svg class="i"><use href="#i-target"/></svg></span>
-            <h3>Fill the time with things that matter</h3>
-            <p>Set a goal like “read every evening”, time your sessions, and pick from 30 activities to do instead of scrolling. Or add your own.</p>
-            <div class="mock goal" style="margin-top:20px" role="img" aria-label="Example goal: read before bed, 5 of 7 days">
-              <div style="display:flex;justify-content:space-between;align-items:baseline"><b>Read before bed</b><span style="font-weight:700;color:var(--teal-700)">5 of 7 days</span></div>
-              <div class="bar" style="margin-top:12px"><i style="width:71%"></i></div>
-              <div class="pills"><i class="done">Mon</i><i class="done">Tue</i><i class="done">Wed</i><i class="skip">Paused</i><i class="done">Fri</i><i class="done">Sat</i><i>Sun</i></div>
-              <p style="font-size:13px;margin-top:12px;color:var(--muted)">Pausing is free: paused days don’t count against you.</p>
-            </div>
-          </article>
-
-          <!-- Analytics -->
-          <article class="tile s3 lime reveal" style="--d:.08s">
-            <span class="chipicon"><svg class="i"><use href="#i-bar"/></svg></span>
-            <h3>See exactly what you saved</h3>
-            <p>Today, this week, this month or any range, with insights that tell you when you scroll the most.</p>
-            <div class="mock" style="width:100%">
-              <div class="saved">45m<small>saved today</small></div>
-              <div class="chart" aria-hidden="true"><i style="height:62%"></i><i style="height:44%"></i><i style="height:78%"></i><i style="height:30%"></i><i style="height:52%"></i><i class="hl" style="height:100%"></i><i style="height:40%"></i></div>
-            </div>
-          </article>
+        <div class="art reveal" style="--d:.1s">
+          <div class="cardmock duel" role="img" aria-label="Example challenge: you are 1 hour 21 minutes ahead of Alex">
+            <div class="top"><span class="who"><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>You</span><span class="vs">VS</span><span class="who">Alex<span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span></span></div>
+            <div><div class="meta-row"><span>You</span><b>2h 10m</b></div><div class="bar"><i style="width:62%"></i></div></div>
+            <div><div class="meta-row"><span>Alex</span><b>3h 31m</b></div><div class="bar warn"><i style="width:100%"></i></div></div>
+            <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge"><svg class="i"><use href="#i-check"/></svg>1h 21m ahead</span><span class="stake"><svg class="i"><use href="#i-coffee"/></svg>Coffee · day 3 of 7</span></div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- Screens -->
-    <section class="shots" aria-label="App screens" style="padding-bottom:40px">
-      <div class="wrap center reveal">
-        <span class="eyebrow">A look inside</span>
-        <h2 class="title">Simple, friendly, a bit cheeky</h2>
+    <!-- Mindful pauses -->
+    <section class="feat night flip" id="pause" style="--bw: #fff">
+      <img class="peeker l" src="/assets/mascot/calm.webp" alt="" width="230" height="136">
+      <div class="bgword" aria-hidden="true"><span>BREATHE</span></div>
+      <div class="wrap">
+        <div class="art reveal">
+          <div class="pause" role="img" aria-label="A paused app with a breathing exercise">
+            <small>Opening an app you chose</small>
+            <h4>Breathe with me.</h4>
+            <p>The urge passes faster than you think.</p>
+            <img class="dm" src="/assets/mascot/calm.webp" alt="" width="230" height="136">
+            <div class="sheet"><b>Breathe in…</b><div class="bar"><i></i></div><span>6s before opening</span></div>
+          </div>
+        </div>
+        <div class="copy reveal" style="--d:.1s">
+          <span class="eyebrow">Mindful pauses</span>
+          <h2>A breath before the scroll.</h2>
+          <p>Choose the apps you open without thinking. When you reach for one, a short guided reset appears. Then it’s your call: close it, or open it for a few minutes.</p>
+          <div class="modchips" aria-label="Guided resets"><span class="on"><svg class="i"><use href="#i-wind"/></svg>Breathing</span><span>Eye reset</span><span>Water</span><span>Posture</span></div>
+          <ul class="ticks">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Your own daily intention shown in the pause</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>No lock, no nagging, no shame</li>
+          </ul>
+        </div>
       </div>
-      <div class="rail" tabindex="0" aria-label="Scrollable app screens">
-        <figure><div class="phone"><img src="/assets/screens/cost.webp" alt="What does scrolling cost you screen" width="402" height="874" loading="lazy"></div><figcaption>Know your cost</figcaption></figure>
-        <figure><div class="phone"><img src="/assets/screens/choose.webp" alt="Choose a challenge" width="402" height="874" loading="lazy"></div><figcaption>Pick a challenge</figcaption></figure>
-        <figure><div class="phone"><img src="/assets/screens/analytics.webp" alt="Analytics" width="402" height="874" loading="lazy"></div><figcaption>See what you saved</figcaption></figure>
-        <figure><div class="phone"><img src="/assets/screens/goal.webp" alt="Set your own goal" width="402" height="874" loading="lazy"></div><figcaption>Set your own goal</figcaption></figure>
+    </section>
+
+    <!-- Circles -->
+    <section class="feat mint" id="circles" style="--bw: var(--teal-500)">
+      <img class="peeker r" src="/assets/mascot/sleepy.webp" alt="" width="230" height="136">
+      <div class="bgword" aria-hidden="true"><span>CREW</span></div>
+      <div class="wrap">
+        <div class="copy reveal">
+          <span class="eyebrow">Circles</span>
+          <h2>Your crew, ranked every week.</h2>
+          <p>Start a circle with friends, family or your class and see who uses their phone least this week. Share a code and anyone can join.</p>
+          <ul class="ticks">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Weekly leaderboard and activity feed</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Join with a code, or by invite</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Challenge anyone in the circle</li>
+          </ul>
+        </div>
+        <div class="art reveal" style="--d:.1s">
+          <div class="cardmock board" role="img" aria-label="Example circle leaderboard">
+            <div class="board-title"><b>Night owls</b><span>This week</span></div>
+            <div class="row"><span class="rk">1</span><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>Alex<span class="t">2h 04m</span></div>
+            <div class="row me"><span class="rk">2</span><span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span>You<span class="t">2h 31m</span></div>
+            <div class="row"><span class="rk">3</span><span class="av c"><img src="/assets/mascot/happy.webp" alt=""></span>Jo<span class="t">3h 12m</span></div>
+            <div class="code"><svg class="i"><use href="#i-key"/></svg>ABCDE-FGHJK</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Moods and streaks -->
+    <section class="feat limeblock flip" id="moods" style="--bw: var(--teal-700)">
+      <img class="peeker l" src="/assets/mascot/red.webp" alt="" width="230" height="136">
+      <div class="bgword" aria-hidden="true"><span>CALM</span></div>
+      <div class="wrap">
+        <div class="art reveal">
+          <div style="width:min(460px,100%)">
+            <div class="moodrow">
+              <div class="moodcard m1"><img src="/assets/mascot/sleepy.webp" alt="A calm demon" width="200" height="118"><b>Calm</b><p>Under 80% of your target</p></div>
+              <div class="moodcard m2"><img src="/assets/mascot/calm.webp" alt="An active demon" width="200" height="118"><b>Active</b><p>Getting close to the limit</p></div>
+              <div class="moodcard m3"><img src="/assets/mascot/red.webp" alt="An overstimulated demon" width="200" height="118"><b>Overstimulated</b><p>Over your target</p></div>
+            </div>
+            <div class="week" aria-label="A seven day streak"><div>M<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>W<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>F<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="today"></i></div></div>
+          </div>
+        </div>
+        <div class="copy reveal" style="--d:.1s">
+          <span class="eyebrow">Streaks and your demon</span>
+          <h2>A demon that <span class="scribble dark">reacts</span> to your day.</h2>
+          <p>Stay under your daily target and it stays calm. Slip, and it gets restless. Every day lands on a calendar, coloured by how it felt.</p>
+          <ul class="ticks">
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>A daily target you set yourself</li>
+            <li><span class="ck"><svg class="i"><use href="#i-check"/></svg></span>Streaks with milestone celebrations</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- And also -->
+    <section class="also">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">And a few more things</span>
+          <h2 class="title">Small details that make it stick</h2>
+        </div>
+        <div class="also-grid">
+          <div class="also-item reveal"><div class="ic"><svg class="i"><use href="#i-target"/></svg></div><h3>Goals that forgive breaks</h3><p>Set a goal, time your sessions, and pause it without losing progress.</p></div>
+          <div class="also-item reveal" style="--d:.06s"><div class="ic"><svg class="i"><use href="#i-flag"/></svg></div><h3>30 things to do instead</h3><p>Mind, move, create or head outside. Or add your own activity.</p></div>
+          <div class="also-item reveal" style="--d:.12s"><div class="ic"><svg class="i"><use href="#i-bar"/></svg></div><h3>Insights that make sense</h3><p>See what you saved today, this week, this month or over any range.</p></div>
+          <div class="also-item reveal" style="--d:.18s"><div class="ic"><svg class="i"><use href="#i-award"/></svg></div><h3>Friends and global boards</h3><p>See where you stand, tap anyone for their profile card, and challenge them.</p></div>
+        </div>
       </div>
     </section>
 
@@ -315,10 +287,10 @@
           <p class="sub">Screen Demons is built so it doesn’t need to know more than it has to.</p>
         </div>
         <div class="priv-grid">
-          <div class="priv reveal"><span class="chipicon"><svg class="i"><use href="#i-eye-off"/></svg></span><h3>Only totals are shared</h3><p>Friends and circles see your daily total, nothing about which apps you use.</p></div>
-          <div class="priv reveal" style="--d:.06s"><span class="chipicon"><svg class="i"><use href="#i-shield"/></svg></span><h3>No ads, no selling data</h3><p>We don’t run ads or sell your information. Ever.</p></div>
-          <div class="priv reveal" style="--d:.12s"><span class="chipicon"><svg class="i"><use href="#i-bar"/></svg></span><h3>Analytics is opt-in</h3><p>Anonymous usage stats stay off unless you say yes, and you can turn them off any time.</p></div>
-          <div class="priv reveal" style="--d:.18s"><span class="chipicon"><svg class="i"><use href="#i-trash"/></svg></span><h3>Delete anytime</h3><p>Delete your account from Profile. It’s gone for good after 24 hours. <a href="/delete-account">How it works</a></p></div>
+          <div class="priv reveal"><div class="ic"><svg class="i"><use href="#i-eye-off"/></svg></div><h3>Only totals are shared</h3><p>Friends and circles see your daily total, nothing about which apps you use.</p></div>
+          <div class="priv reveal" style="--d:.06s"><div class="ic"><svg class="i"><use href="#i-shield"/></svg></div><h3>No ads, no selling data</h3><p>We don’t run ads or sell your information. Ever.</p></div>
+          <div class="priv reveal" style="--d:.12s"><div class="ic"><svg class="i"><use href="#i-bar"/></svg></div><h3>Analytics is opt-in</h3><p>Anonymous usage stats stay off unless you say yes, and you can turn them off any time.</p></div>
+          <div class="priv reveal" style="--d:.18s"><div class="ic"><svg class="i"><use href="#i-trash"/></svg></div><h3>Delete anytime</h3><p>Delete your account from Profile. It’s gone for good after 24 hours. <a href="/delete-account">How it works</a></p></div>
         </div>
       </div>
     </section>
@@ -348,7 +320,7 @@
       <div class="wrap">
         <div class="copy">
           <h2>Ready to starve your demon?</h2>
-          <p class="sub" style="margin-top:16px">Get Screen Demons on iPhone today. On Android? Leave your email and we’ll tell you the moment it’s ready.</p>
+          <p class="sub">Get Screen Demons on iPhone today. On Android? Leave your email and we’ll tell you the moment it’s ready.</p>
           <div class="cta-row">
             <a class="btn btn-dark" data-store="ios" href="https://apps.apple.com/app/id6796334366"><svg class="i"><use href="#i-smartphone"/></svg><span class="two"><small>Download on the</small>App Store</span></a>
           </div>
@@ -358,7 +330,7 @@
           </form>
           <div class="status" id="statusMsg" role="status" aria-live="polite"></div>
         </div>
-        <img class="art" src="/assets/mascot/happy.webp" alt="" width="420" height="248" loading="lazy">
+        <img class="art-img" src="/assets/mascot/happy.webp" alt="" width="430" height="254" loading="lazy">
       </div>
     </section>
   </main>
@@ -375,6 +347,8 @@
       <span style="font-size:13px">© 2026 Screen Demons</span>
     </div>
   </footer>
+
+  <div class="sticky-cta" id="stickyCta"><span>Starve your demon</span><a class="btn btn-lime btn-small" data-store="ios" href="https://apps.apple.com/app/id6796334366">Get the app</a></div>
 
   <script src="/assets/site.js" defer></script>
 </body>
