@@ -1,195 +1,381 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Screen Demons</title>
-    <meta property="og:title" content="Screen Demons">
-    <meta property="og:description" content="Build healthier digital habits and compete in wellness challenges to reduce your screen time!">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://screendemons.app">
-    <meta property="og:image" content="https://screendemons.app/og-image-v2.png">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content="https://screendemons.app/og-image-v2.png">
-    <meta name="twitter:title" content="Screen Demons">
-    <meta name="twitter:description" content="Build healthier digital habits and compete in wellness challenges to reduce your screen time!">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --bg: #09090b;
-            --text: #fafafa;
-            --accent: #ef4444;
-            --muted: #a1a1aa;
-            --input-bg: #18181b;
-            --border: #27272a;
-        }
-        body {
-            margin: 0;
-            padding: 0;
-            background: var(--bg);
-            color: var(--text);
-            font-family: "Inter", -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-            -webkit-font-smoothing: antialiased;
-        }
-        main {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            padding: 2rem;
-            text-align: center;
-        }
-        h1 {
-            font-size: clamp(3rem, 8vw, 6rem);
-            font-weight: 800;
-            letter-spacing: -0.04em;
-            margin: 0;
-            background: linear-gradient(135deg, #fff 0%, #a1a1aa 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .subtitle {
-            font-size: clamp(1.1rem, 3vw, 1.4rem);
-            color: var(--muted);
-            max-width: 600px;
-            margin: 1.5rem 0 3rem;
-            line-height: 1.5;
-        }
-        .waitlist-form {
-            display: flex;
-            gap: 10px;
-            width: 100%;
-            max-width: 400px;
-            margin: 0 auto;
-        }
-        input[type="email"] {
-            flex: 1;
-            background: var(--input-bg);
-            border: 1px solid var(--border);
-            color: var(--text);
-            padding: 1rem 1.2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            outline: none;
-            transition: border-color 0.2s;
-        }
-        input[type="email"]:focus {
-            border-color: var(--muted);
-        }
-        button {
-            background: var(--text);
-            color: var(--bg);
-            border: none;
-            padding: 0 1.5rem;
-            border-radius: 8px;
-            font-weight: 600;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: transform 0.1s ease, opacity 0.2s ease;
-        }
-        button:hover {
-            transform: scale(1.02);
-            opacity: 0.9;
-        }
-        button:active {
-            transform: scale(0.98);
-        }
-        .status {
-            margin-top: 1rem;
-            font-size: 0.9rem;
-            color: var(--muted);
-            min-height: 1.2em;
-        }
-        .success { color: #22c55e; }
-        .error { color: var(--accent); }
-        footer {
-            padding: 2rem;
-            text-align: center;
-            border-top: 1px solid var(--border);
-        }
-        footer a {
-            color: var(--muted);
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        footer a:hover {
-            color: var(--text);
-        }
-        @media (max-width: 480px) {
-            .waitlist-form { flex-direction: column; }
-            button { padding: 1rem; }
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Screen Demons: reduce your screen time with friends</title>
+  <meta name="description" content="Screen Demons turns cutting screen time into a game with friends. Challenge people you know, build streaks, pause before distracting apps, and keep your demon calm. Free on iPhone, Android coming soon.">
+  <link rel="canonical" href="https://screendemons.app/">
+  <meta name="theme-color" content="#0C2A32">
+  <meta name="apple-itunes-app" content="app-id=6796334366">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Screen Demons">
+  <meta property="og:title" content="Screen Demons: reduce the scroll, reclaim your time">
+  <meta property="og:description" content="Challenge friends, build streaks and starve your screen demon. A calmer way to use your phone.">
+  <meta property="og:url" content="https://screendemons.app/">
+  <meta property="og:image" content="https://screendemons.app/og-image-v3.png">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Screen Demons: Reduce the scroll. Reclaim your time. With the Screen Demon mascot.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Screen Demons: reduce the scroll, reclaim your time">
+  <meta name="twitter:description" content="Challenge friends, build streaks and starve your screen demon.">
+  <meta name="twitter:image" content="https://screendemons.app/og-image-v3.png">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/icons/favicon-32.png">
+  <link rel="apple-touch-icon" href="/assets/icons/apple-touch-icon.png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="preload" as="image" href="/assets/screens/home.webp" type="image/webp">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      { "@type": "Organization", "name": "Screen Demons", "url": "https://screendemons.app/", "logo": "https://screendemons.app/assets/icons/icon-512.png" },
+      { "@type": "MobileApplication", "name": "Screen Demons", "operatingSystem": "iOS, Android", "applicationCategory": "LifestyleApplication", "description": "Reduce your screen time through social accountability. Challenge friends, build streaks and pause before distracting apps.", "url": "https://screendemons.app/", "image": "https://screendemons.app/og-image-v3.png", "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" } },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          { "@type": "Question", "name": "Does Screen Demons see which apps I use?", "acceptedAnswer": { "@type": "Answer", "text": "No. Only your daily screen-time total is shared, with friends you challenge and circles you join. Which apps you use never leaves your phone." } },
+          { "@type": "Question", "name": "Is it free?", "acceptedAnswer": { "@type": "Answer", "text": "It is free to download. An optional Premium subscription is on the way, and details will be in the app." } },
+          { "@type": "Question", "name": "Is it on Android?", "acceptedAnswer": { "@type": "Answer", "text": "iPhone is available now. Android is coming soon. Join the waitlist on this page and we will email you the day it is live." } },
+          { "@type": "Question", "name": "Why does it need Screen Time access?", "acceptedAnswer": { "@type": "Answer", "text": "Your daily total is what powers your demon's mood, your streak and the challenges with your friends. Without it the app can't do anything useful, so it is the one permission we require." } },
+          { "@type": "Question", "name": "Can I delete my account?", "acceptedAnswer": { "@type": "Answer", "text": "Yes, anytime from Profile. Your account and data are permanently deleted 24 hours later, and you can change your mind in that time." } }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-    <main>
-        <h1>ScreenDemons</h1>
-        <p class="subtitle">Reduce your screen time through social accountability. Challenge your friends, build streaks, and reclaim your focus altogether.</p>
-        
-        <form class="waitlist-form" id="waitlistForm" action="https://formspree.io/f/xdaqeeel" method="POST">
-            <input type="email" name="email" id="emailInput" placeholder="Enter your email address" required autocomplete="email">
-            <button type="submit" id="submitBtn">Join Waitlist</button>
-        </form>
-        <div class="status" id="statusMsg"></div>
+  <!-- Icons (Feather, MIT). Used with <svg class="i"><use href="#i-name"/></svg> -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true">
+    <symbol id="i-check" viewBox="0 0 24 24"><polyline points="20 6 9 17 4 12"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-wind" viewBox="0 0 24 24"><path d="M9.59 4.59A2 2 0 1 1 11 8H2m10.59 11.41A2 2 0 1 0 14 16H2m15.73-8.27A2.5 2.5 0 1 1 19.5 12H2"/></symbol>
+    <symbol id="i-lock" viewBox="0 0 24 24"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></symbol>
+    <symbol id="i-award" viewBox="0 0 24 24"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></symbol>
+    <symbol id="i-shield" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></symbol>
+    <symbol id="i-bar" viewBox="0 0 24 24"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></symbol>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></symbol>
+    <symbol id="i-key" viewBox="0 0 24 24"><path d="M21 2l-2 2m-7.61 7.61a5.5 5.5 0 1 1-7.778 7.778 5.5 5.5 0 0 1 7.777-7.777zm0 0L15.5 7.5m0 0l3 3L22 7l-3-3m-3.5 3.5L19 4"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><polyline points="3 6 5 6 21 6"/><path d="M19 6l-1 14a2 2 0 0 1-2 2H8a2 2 0 0 1-2-2L5 6m5 0V4a2 2 0 0 1 2-2h0a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="i-eye-off" viewBox="0 0 24 24"><path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/><line x1="1" y1="1" x2="23" y2="23"/></symbol>
+    <symbol id="i-smartphone" viewBox="0 0 24 24"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></symbol>
+  </svg>
 
-    </main>
-    <footer>
-        <a href="/privacypolicy">Privacy Policy</a> | <a href="/terms">Terms & Conditions</a>
-    </footer>
+  <a class="skip" href="#main">Skip to content</a>
 
-    <script>
-        const form = document.getElementById('waitlistForm');
-        
-        form.addEventListener('submit', async (e) => {
-            e.preventDefault();
-            const btn = document.getElementById('submitBtn');
-            const status = document.getElementById('statusMsg');
-            
-            btn.disabled = true;
-            btn.innerText = 'Joining...';
-            status.className = 'status';
-            status.innerText = '';
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="Screen Demons home">
+        <img src="/assets/icons/icon-192.png" alt="" width="38" height="38">
+        Screen Demons
+      </a>
+      <nav class="nav-links" aria-label="Main">
+        <a href="#cost">What it costs you</a>
+        <a href="#how">How it works</a>
+        <a href="#features">Features</a>
+        <a href="#privacy">Privacy</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-lime btn-small" data-store="ios" href="https://apps.apple.com/app/id6796334366">Get the app</a>
+    </div>
+  </header>
 
-            try {
-                const response = await fetch(form.action, {
-                    method: form.method,
-                    body: new FormData(form),
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                });
+  <main id="main">
+    <!-- Hero -->
+    <section class="hero" style="padding:0">
+      <div class="wrap">
+        <div>
+          <span class="tag"><span class="dot"></span>Screen time, but social</span>
+          <h1>Reduce the scroll. <span class="hl">Reclaim your time.</span></h1>
+          <p class="lede">Screen Demons turns cutting back into a game you play with friends. Challenge them, build streaks, take a breath before the apps that pull you in, and keep your demon calm.</p>
+          <div class="cta-row">
+            <a class="btn btn-lime" data-store="ios" href="https://apps.apple.com/app/id6796334366">
+              <svg class="i"><use href="#i-smartphone"/></svg>
+              <span class="two"><small>Download on the</small>App Store</span>
+            </a>
+            <a class="btn btn-ghost" data-store="android" href="#waitlist" aria-disabled="true">
+              <svg class="i"><use href="#i-play"/></svg>
+              <span class="two"><small>Android</small>Coming soon</span>
+            </a>
+          </div>
+          <div class="trust">
+            <span><svg class="i"><use href="#i-check"/></svg>Free to download</span>
+            <span><svg class="i"><use href="#i-check"/></svg>No ads</span>
+            <span><svg class="i"><use href="#i-check"/></svg>Your apps stay private</span>
+          </div>
+        </div>
 
-                if (response.ok) {
-                    status.className = 'status success';
-                    status.innerText = 'Added to the waitlist! We will be in touch.';
-                    form.reset();
-                } else {
-                    const data = await response.json();
-                    if (Object.hasOwn(data, 'errors')) {
-                        status.innerText = data.errors.map(err => err.message).join(', ');
-                    } else {
-                        status.innerText = 'Oops! There was a problem submitting your form';
-                    }
-                    status.className = 'status error';
-                }
-            } catch (error) {
-                status.className = 'status error';
-                status.innerText = 'Oops! There was a problem submitting your form';
-            } finally {
-                btn.disabled = false;
-                btn.innerText = 'Join Waitlist';
-            }
-        });
-    </script>
+        <div class="hero-art">
+          <img class="demon" src="/assets/mascot/happy.webp" alt="The Screen Demons mascot peeking over the phone" width="330" height="195">
+          <div class="phone"><img src="/assets/screens/home.webp" alt="The Screen Demons home screen with streak, savings and leaderboard" width="402" height="874" fetchpriority="high"></div>
+          <div class="float one"><span class="ring"></span><span><small>You saved</small><span class="big-n">45m today</span></span></div>
+          <div class="float two"><small>Coffee at stake</small><span style="color:#1F6B45">You’re 1h 21m ahead</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Ticker -->
+    <div class="ticker" aria-hidden="true">
+      <div class="track">
+        <span>Loser buys the coffee</span><span>Winner picks dinner</span><span>Double or nothing</span><span>Pizza on the line</span><span>One more day, one more streak</span><span>Starve the demon</span>
+        <span>Loser buys the coffee</span><span>Winner picks dinner</span><span>Double or nothing</span><span>Pizza on the line</span><span>One more day, one more streak</span><span>Starve the demon</span>
+      </div>
+    </div>
+
+    <!-- Cost -->
+    <section id="cost" class="cost">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Be honest, nobody’s watching</span>
+          <h2 class="title">What does scrolling cost you?</h2>
+          <p class="sub">Slide your age and daily screen time. It’s the same moment that opens the app, and it’s a little shocking in a useful way.</p>
+          <div class="cta-row">
+            <a class="btn btn-lime" data-store="ios" href="https://apps.apple.com/app/id6796334366">Let’s win it back</a>
+          </div>
+        </div>
+        <div class="calc reveal" style="--d:.1s">
+          <img class="peek" src="/assets/mascot/happy.webp" alt="" width="140" height="83">
+          <div class="readout">
+            <div class="num"><span id="years" style="font-size:1em;margin:0">9.2</span><span>years</span></div>
+            <p>of your life on your phone, from age <b id="ageText">25</b> to 80</p>
+            <span class="pill">That’s <span id="share">25%</span> of your waking hours</span>
+          </div>
+          <div class="slider">
+            <div class="row"><label for="age">Your age</label><b id="ageOut">25</b></div>
+            <input id="age" type="range" min="10" max="79" step="1" value="25" aria-valuetext="25 years old">
+          </div>
+          <div class="slider">
+            <div class="row"><label for="hours">Screen time a day</label><b id="hoursOut">4 h</b></div>
+            <input id="hours" type="range" min="0.5" max="12" step="0.5" value="4" aria-valuetext="4 hours a day">
+          </div>
+          <div class="spans">
+            <div><b id="week">1.2 days</b><span>a week</span></div>
+            <div><b id="month">5 days</b><span>a month</span></div>
+            <div><b id="year">2 months</b><span>a year</span></div>
+          </div>
+          <div class="win"><span class="tick"><svg class="i"><use href="#i-check"/></svg></span><span id="win">Keep your demon <strong>green (under 2 h)</strong> and you <strong>win back 4.6 years</strong>.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Three taps to start</span>
+          <h2 class="title">Set up in a minute.<br>Your demon does the watching.</h2>
+        </div>
+        <div class="steps">
+          <div class="step reveal"><div class="n">1</div><h3>Let it watch your total</h3><p>Allow Screen Time once. Your daily total powers your demon’s mood, your streak and your challenges. Nothing about individual apps is collected.</p></div>
+          <div class="step reveal" style="--d:.1s"><div class="n">2</div><h3>Challenge a friend</h3><p>Go no-phone, cut your time by an hour, or skip social media. Pick what’s at stake, from a coffee to a dare, and send it.</p></div>
+          <div class="step reveal" style="--d:.2s"><div class="n">3</div><h3>Watch the demon shrink</h3><p>Every calm day keeps your demon small and your streak alive. Win and your friend owes you. Lose and there’s always a rematch.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features -->
+    <section id="features" style="padding-top:0">
+      <div class="wrap">
+        <div class="center reveal">
+          <span class="eyebrow">Everything in the app</span>
+          <h2 class="title">Built to make cutting back<br>actually fun</h2>
+        </div>
+
+        <div class="bento">
+          <!-- Challenges -->
+          <article class="tile s4 reveal">
+            <div class="split">
+              <div>
+                <span class="chipicon"><svg class="i"><use href="#i-zap"/></svg></span>
+                <h3>Bet your friends on who scrolls less</h3>
+                <p>Challenge anyone on your friends list or in your circles. Whoever uses their phone least wins, and the loser pays the stake.</p>
+                <ul class="ticks">
+                  <li><svg class="i"><use href="#i-check"/></svg>No Phone, Reduce Screen Time or No Social Media</li>
+                  <li><svg class="i"><use href="#i-check"/></svg>From 1 to 30 days, starting when you choose</li>
+                  <li><svg class="i"><use href="#i-check"/></svg>Rematch, or go double or nothing</li>
+                </ul>
+              </div>
+              <div class="duel" role="img" aria-label="Example challenge: you are 1 hour 21 minutes ahead of Alex">
+                <div class="top">
+                  <span class="who"><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>You</span>
+                  <span class="vs">VS</span>
+                  <span class="who">Alex<span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span></span>
+                </div>
+                <div><div class="meta-row"><span>You</span><b>2h 10m</b></div><div class="bar"><i style="width:62%"></i></div></div>
+                <div><div class="meta-row"><span>Alex</span><b>3h 31m</b></div><div class="bar warn"><i style="width:100%"></i></div></div>
+                <div style="display:flex;gap:8px;flex-wrap:wrap"><span class="badge"><svg class="i"><use href="#i-check"/></svg>1h 21m ahead</span><span class="stake"><svg class="i"><use href="#i-coffee"/></svg>Coffee · day 3 of 7</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Mindful pauses -->
+          <article class="tile s2 r2 dark reveal" style="--d:.08s">
+            <span class="chipicon"><svg class="i"><use href="#i-wind"/></svg></span>
+            <h3>A breath before the apps that pull you in</h3>
+            <p>Choose the apps you open without thinking. When you reach for one, a short guided reset appears. Then you decide.</p>
+            <div class="modchips" aria-label="Guided resets"><span class="on"><svg class="i"><use href="#i-wind"/></svg>Breathing</span><span>Eye reset</span><span>Water</span><span>Posture</span></div>
+            <div class="mock" style="width:100%">
+              <div class="pause" role="img" aria-label="A paused app with a breathing exercise">
+                <small>Opening an app you chose</small>
+                <h4>Breathe with me.</h4>
+                <p>The urge passes faster than you think.</p>
+                <img class="dm" src="/assets/mascot/calm.webp" alt="" width="190" height="115">
+                <div class="sheet"><b>Breathe in…</b><div class="bar"><i></i></div><span>6s before opening</span></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Streaks and moods -->
+          <article class="tile s2 mint reveal" style="--d:.1s">
+            <span class="chipicon"><svg class="i"><use href="#i-award"/></svg></span>
+            <h3>A demon that reacts to your day</h3>
+            <div class="streakn"><b>7</b><span style="font-weight:700">day streak</span></div>
+            <div class="week" aria-hidden="true">
+              <div>M<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>W<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>T<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>F<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="on"><svg class="i"><use href="#i-check"/></svg></i></div><div>S<i class="today"></i></div>
+            </div>
+            <div class="moods">
+              <figure class="c1"><div class="face"><img src="/assets/mascot/sleepy.webp" alt="A calm demon"></div><figcaption>Calm</figcaption></figure>
+              <figure class="c2"><div class="face"><img src="/assets/mascot/calm.webp" alt="An active demon"></div><figcaption>Active</figcaption></figure>
+              <figure class="c3"><div class="face"><img src="/assets/mascot/red.webp" alt="An overstimulated demon"></div><figcaption>Overstimulated</figcaption></figure>
+            </div>
+          </article>
+
+          <!-- Circles -->
+          <article class="tile s2 reveal" style="--d:.15s">
+            <span class="chipicon"><svg class="i"><use href="#i-users"/></svg></span>
+            <h3>Your crew, ranked every week</h3>
+            <p>Start a circle with friends or your class. Share a code and anyone can join.</p>
+            <div class="mock board" style="margin-top:20px" role="img" aria-label="Example circle leaderboard">
+              <div class="row"><span class="rk">1</span><span class="av"><img src="/assets/mascot/happy.webp" alt=""></span>Alex<span class="t">2h 04m</span></div>
+              <div class="row"><span class="rk">2</span><span class="av b"><img src="/assets/mascot/happy.webp" alt=""></span>You<span class="t">2h 31m</span></div>
+              <div class="row"><span class="rk">3</span><span class="av c"><img src="/assets/mascot/happy.webp" alt=""></span>Jo<span class="t">3h 12m</span></div>
+              <div class="code"><svg class="i"><use href="#i-key"/></svg>ABCDE-FGHJK</div>
+            </div>
+          </article>
+
+          <!-- Goals -->
+          <article class="tile s3 reveal">
+            <span class="chipicon"><svg class="i"><use href="#i-target"/></svg></span>
+            <h3>Fill the time with things that matter</h3>
+            <p>Set a goal like “read every evening”, time your sessions, and pick from 30 activities to do instead of scrolling. Or add your own.</p>
+            <div class="mock goal" style="margin-top:20px" role="img" aria-label="Example goal: read before bed, 5 of 7 days">
+              <div style="display:flex;justify-content:space-between;align-items:baseline"><b>Read before bed</b><span style="font-weight:700;color:var(--teal-700)">5 of 7 days</span></div>
+              <div class="bar" style="margin-top:12px"><i style="width:71%"></i></div>
+              <div class="pills"><i class="done">Mon</i><i class="done">Tue</i><i class="done">Wed</i><i class="skip">Paused</i><i class="done">Fri</i><i class="done">Sat</i><i>Sun</i></div>
+              <p style="font-size:13px;margin-top:12px;color:var(--muted)">Pausing is free: paused days don’t count against you.</p>
+            </div>
+          </article>
+
+          <!-- Analytics -->
+          <article class="tile s3 lime reveal" style="--d:.08s">
+            <span class="chipicon"><svg class="i"><use href="#i-bar"/></svg></span>
+            <h3>See exactly what you saved</h3>
+            <p>Today, this week, this month or any range, with insights that tell you when you scroll the most.</p>
+            <div class="mock" style="width:100%">
+              <div class="saved">45m<small>saved today</small></div>
+              <div class="chart" aria-hidden="true"><i style="height:62%"></i><i style="height:44%"></i><i style="height:78%"></i><i style="height:30%"></i><i style="height:52%"></i><i class="hl" style="height:100%"></i><i style="height:40%"></i></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Screens -->
+    <section class="shots" aria-label="App screens" style="padding-bottom:40px">
+      <div class="wrap center reveal">
+        <span class="eyebrow">A look inside</span>
+        <h2 class="title">Simple, friendly, a bit cheeky</h2>
+      </div>
+      <div class="rail" tabindex="0" aria-label="Scrollable app screens">
+        <figure><div class="phone"><img src="/assets/screens/cost.webp" alt="What does scrolling cost you screen" width="402" height="874" loading="lazy"></div><figcaption>Know your cost</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/choose.webp" alt="Choose a challenge" width="402" height="874" loading="lazy"></div><figcaption>Pick a challenge</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/analytics.webp" alt="Analytics" width="402" height="874" loading="lazy"></div><figcaption>See what you saved</figcaption></figure>
+        <figure><div class="phone"><img src="/assets/screens/goal.webp" alt="Set your own goal" width="402" height="874" loading="lazy"></div><figcaption>Set your own goal</figcaption></figure>
+      </div>
+    </section>
+
+    <!-- Privacy -->
+    <section id="privacy" class="privacy">
+      <div class="wrap">
+        <div class="reveal">
+          <span class="eyebrow">Privacy first</span>
+          <h2 class="title">Your apps stay yours</h2>
+          <p class="sub">Screen Demons is built so it doesn’t need to know more than it has to.</p>
+        </div>
+        <div class="priv-grid">
+          <div class="priv reveal"><span class="chipicon"><svg class="i"><use href="#i-eye-off"/></svg></span><h3>Only totals are shared</h3><p>Friends and circles see your daily total, nothing about which apps you use.</p></div>
+          <div class="priv reveal" style="--d:.06s"><span class="chipicon"><svg class="i"><use href="#i-shield"/></svg></span><h3>No ads, no selling data</h3><p>We don’t run ads or sell your information. Ever.</p></div>
+          <div class="priv reveal" style="--d:.12s"><span class="chipicon"><svg class="i"><use href="#i-bar"/></svg></span><h3>Analytics is opt-in</h3><p>Anonymous usage stats stay off unless you say yes, and you can turn them off any time.</p></div>
+          <div class="priv reveal" style="--d:.18s"><span class="chipicon"><svg class="i"><use href="#i-trash"/></svg></span><h3>Delete anytime</h3><p>Delete your account from Profile. It’s gone for good after 24 hours. <a href="/delete-account">How it works</a></p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq">
+      <div class="wrap faq-wrap">
+        <div class="reveal">
+          <span class="eyebrow">Questions</span>
+          <h2 class="title">Good to know</h2>
+          <p class="sub">Can’t find it here? Email <a href="mailto:admin@screendemons.com" style="color:var(--teal-700);font-weight:600">admin@screendemons.com</a>.</p>
+        </div>
+        <div class="faq reveal" style="--d:.1s">
+          <details><summary>Does Screen Demons see which apps I use?</summary><p>No. Only your daily screen-time total is shared, with friends you challenge and circles you join. Which apps you use never leaves your phone. The apps you choose for mindful pauses stay on your device.</p></details>
+          <details><summary>Is it free?</summary><p>It’s free to download. An optional Premium subscription is on the way, and the details will be in the app before anything is charged.</p></details>
+          <details><summary>Is it on Android?</summary><p>iPhone is available now. Android is coming soon: join the waitlist below and we’ll email you the day it’s live.</p></details>
+          <details><summary>Why does it need Screen Time access?</summary><p>Your daily total is what powers your demon’s mood, your streak and challenges with friends. Without it there’s nothing to measure, so it’s the one permission the app requires. Notifications and mindful pauses are optional.</p></details>
+          <details><summary>How do mindful pauses work?</summary><p>You pick the apps you open without thinking. When you open one, Screen Demons shows a short guided reset, then you choose to close the app or continue. On Android this uses Accessibility, only to notice which of your chosen apps is in front. It never reads what’s on your screen.</p></details>
+          <details><summary>What if a friend doesn’t have the app?</summary><p>Challenges are between people in the app, so send them your invite link and they can join in a minute.</p></details>
+          <details><summary>Can I delete my account?</summary><p>Yes, any time from Profile. Your account and data are permanently deleted 24 hours later, and you can restore it in that time if you change your mind. See <a href="/delete-account">how deletion works</a>.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- Final call -->
+    <section id="waitlist" class="final">
+      <div class="wrap">
+        <div class="copy">
+          <h2>Ready to starve your demon?</h2>
+          <p class="sub" style="margin-top:16px">Get Screen Demons on iPhone today. On Android? Leave your email and we’ll tell you the moment it’s ready.</p>
+          <div class="cta-row">
+            <a class="btn btn-dark" data-store="ios" href="https://apps.apple.com/app/id6796334366"><svg class="i"><use href="#i-smartphone"/></svg><span class="two"><small>Download on the</small>App Store</span></a>
+          </div>
+          <form class="waitlist" id="waitlistForm" action="https://formspree.io/f/xdaqeeel" method="POST">
+            <input type="email" name="email" placeholder="Your email, for Android" required autocomplete="email" aria-label="Email address">
+            <button class="btn btn-dark" id="submitBtn" type="submit">Notify me</button>
+          </form>
+          <div class="status" id="statusMsg" role="status" aria-live="polite"></div>
+        </div>
+        <img class="art" src="/assets/mascot/happy.webp" alt="" width="420" height="248" loading="lazy">
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <a class="brand" href="/" style="font-size:18px"><img src="/assets/icons/icon-192.png" alt="" width="32" height="32">Screen Demons</a>
+      <nav aria-label="Footer">
+        <a href="/privacypolicy">Privacy Policy</a>
+        <a href="/terms">Terms &amp; Conditions</a>
+        <a href="/delete-account">Delete account</a>
+        <a href="mailto:admin@screendemons.com">Contact</a>
+      </nav>
+      <span style="font-size:13px">© 2026 Screen Demons</span>
+    </div>
+  </footer>
+
+  <script src="/assets/site.js" defer></script>
 </body>
 </html>
